@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #fff;
+            color: #101828;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            height: 85px;
+            padding: 0 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            font-size: 35px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #101828;
+        }
+
+        .logo span {
+            color: #1769ff;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #1769ff;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* HERO */
+        .article-hero {
+            padding: 80px 8% 40px;
+            text-align: center;
+            background: #f5f8ff;
+        }
+
+        .article-category {
+            color: #1769ff;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .article-hero h1 {
+            max-width: 900px;
+            margin: 20px auto;
+            font-size: clamp(32px, 5vw, 55px);
+            line-height: 1.3;
+            font-weight: 800;
+        }
+
+        .article-hero p {
+            color: #667085;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .author-info {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            font-size: 12px;
+            color: #667085;
+        }
+
+        /* ARTICLE IMAGE */
+        .article-image {
+            width: 84%;
+            height: 430px;
+            margin: 30px auto 60px;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        .article-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* ARTICLE CONTENT */
+        .article-container {
+            max-width: 850px;
+            margin: auto;
+            padding: 0 25px 80px;
+        }
+
+        .article-container h2 {
+            font-size: 25px;
+            margin: 40px 0 15px;
+            color: #101828;
+        }
+
+        .article-container p {
+            font-size: 15px;
+            color: #667085;
+            line-height: 2;
+            margin-bottom: 20px;
+        }
+
+        .article-container ul {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .article-container li {
+            color: #667085;
+            font-size: 14px;
+            line-height: 2.2;
+        }
+
+        .highlight {
+            background: #f5f8ff;
+            border-left: 4px solid #1769ff;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #101828;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* SHARE SECTION */
+        .share-section {
+            border-top: 1px solid #eee;
+            padding-top: 30px;
+            margin-top: 50px;
+        }
+
+        .share-section h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .share-section a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #1769ff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 13px;
+            margin-right: 10px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: black;
+            color: white;
+            padding: 45px 8%;
+            text-align: center;
+        }
+        .images{
+            border-radius: 20px;
+        height: 15vh;
+    }
+        footer .logo {
+            color: white;
+        }
+
+        footer p {
+            color: #aab4c5;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        /* RESPONSIVENESS */
+        @media(max-width: 768px) {
+
+            .navbar {
+                height: 75px;
+                padding: 0 6%;
+            }
+
+            .article-hero {
+                padding: 65px 6% 35px;
+            }
+
+            .article-hero h1 {
+                font-size: 36px;
+            }
+
+            .article-image {
+                width: 90%;
+                height: 300px;
+                margin: 25px auto 40px;
+            }
+
+            .article-container {
+                padding: 0 7% 60px;
+            }
+
+            .article-container h2 {
+                font-size: 22px;
+            }
+
+            .article-container p {
+                font-size: 14px;
+            }
+        }
+
+        @media(max-width: 425px) {
+
+            .article-hero h1 {
+                font-size: 29px;
+            }
+
+            .article-hero p {
+                font-size: 12px;
+            }
+
+            .author-info {
+                gap: 12px;
+            }
+
+            .article-image {
+                height: 220px;
+            }
+
+            .article-container h2 {
+                font-size: 20px;
+            }
+
+            .article-container p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">D<span>.</span></a>
+
+        <a href="My blog.html" class="back-link">
+            ← Back To Blog
+        </a>
+
+    </header>
+
+
+    <!-- ARTICLE HERO -->
+    <section class="article-hero">
+
+        <span class="article-category">WEB DEVELOPMENT</span>
+
+        <h1>My Journey Into The World Of Web Development</h1>
+
+        <p>
+            Every great developer starts somewhere. Discover how I started
+            learning HTML, CSS and JavaScript.
+        </p>
+
+        <div class="author-info">
+            <span>✍️ Daniel</span>
+            <span>📅 November 04, 2026</span>
+            <span>⏱ 5 min read</span>
+        </div>
+
+    </section>
+
+
+    <!-- ARTICLE IMAGE -->
+    <div class="article-image">
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1400&q=85"
+             alt="Web developer working on a computer">
+
+    </div>
+
+
+    <!-- ARTICLE CONTENT -->
+    <main class="article-container">
+
+        <h2>Introduction</h2>
+
+        <p>
+            Every great developer starts somewhere, and my journey into
+            web development has been an exciting experience filled with
+            learning, creativity, challenges, and personal growth.
+        </p>
+
+        <p>
+            I started my journey with curiosity about how websites are
+            created and how different elements come together to produce
+            beautiful and interactive experiences. What initially seemed
+            complicated gradually became something I enjoyed exploring.
+        </p>
+
+        <p>
+            Web development has taught me that creating a website is not
+            just about writing code. It is about solving problems,
+            expressing creativity, and turning ideas into something
+            people can interact with.
+        </p>
+
+
+        <h2>Discovering HTML and CSS</h2>
+
+        <p>
+            My first step into web development was learning HTML and CSS.
+            HTML, also known as HyperText Markup Language, introduced me
+            to the structure of websites.
+        </p>
+
+        <p>
+            I learned how to create headings, paragraphs, images, links,
+            buttons, and different sections. After understanding HTML,
+            I moved on to CSS.
+        </p>
+
+        <p>
+            CSS (Cascading Style Sheets) made everything more interesting.
+            It allowed me to transform simple HTML structures into
+            beautiful website designs.
+        </p>
+
+        <ul>
+            <li>Adding colours and backgrounds.</li>
+            <li>Arranging elements using Flexbox and Grid.</li>
+            <li>Creating responsive website layouts.</li>
+            <li>Adding hover effects and transitions.</li>
+            <li>Styling navigation bars, buttons, and sections.</li>
+        </ul>
+
+        <p>
+            With every new concept, I became more confident in my
+            ability to create websites.
+        </p>
+
+
+        <h2>Learning JavaScript</h2>
+
+        <p>
+            After becoming more comfortable with HTML and CSS,
+            I discovered JavaScript.
+        </p>
+
+        <p>
+            JavaScript introduced me to the interactive side of
+            web development. I began learning how to make buttons
+            work, create interactive navigation menus, validate forms,
+            and add functionality to websites.
+        </p>
+
+        <p>
+            At first, some concepts were difficult to understand,
+            but practising regularly helped me improve.
+        </p>
+
+
+        <h2>The Challenges Along The Way</h2>
+
+        <p>
+            Like every learning journey, mine has come with challenges.
+            Sometimes, my CSS layouts would not look the way I expected.
+            Other times, I would write JavaScript code and struggle to
+            understand why it was not working.
+        </p>
+
+        <p>
+            There were moments when I had to go back, review my code,
+            and try different approaches before finding a solution.
+        </p>
+
+        <p>
+            However, these experiences taught me something important:
+            making mistakes is part of becoming a better developer.
+        </p>
+
+        <div class="highlight">
+            <p>
+                "Every error is an opportunity to learn something new.
+                The important thing is to keep practising and never
+                stop improving."
+            </p>
+        </div>
+
+
+        <h2>Building Projects and Gaining Experience</h2>
+
+        <p>
+            One of the most exciting parts of learning web development
+            has been building projects.
+        </p>
+
+        <p>
+            Instead of only learning from tutorials, I started putting
+            my knowledge into practice by creating different website
+            sections and complete pages.
+        </p>
+
+        <ul>
+            <li>Personal portfolio websites.</li>
+            <li>E-commerce website layouts.</li>
+            <li>Navigation bars and responsive menus.</li>
+            <li>Contact forms.</li>
+            <li>Product displays and image galleries.</li>
+            <li>Interactive website components.</li>
+        </ul>
+
+        <p>
+            Working on these projects has helped me understand how
+            different parts of a website work together. It has also
+            allowed me to experiment with different designs and
+            develop my creativity.
+        </p>
+
+
+        <h2>What's Next?</h2>
+
+        <p>
+            My journey in web development is still growing, and there
+            is so much more I want to explore.
+        </p>
+
+        <p>
+            I look forward to improving my JavaScript skills, learning
+            new technologies, understanding modern web development
+            practices, and building more creative projects.
+        </p>
+
+        <p>
+            My goal is to become a skilled developer who can turn
+            creative ideas into functional, accessible, and meaningful
+            digital experiences.
+        </p>
+
+
+        <h2>Final Thoughts</h2>
+
+        <p>
+            Looking back at where I started, I can appreciate how much
+            I have learned and how far I have come.
+        </p>
+
+        <p>
+            Web development has shown me that growth happens one step
+            at a time. Every line of code, every project, and every
+            challenge contributes to becoming better.
+        </p>
+
+        <p>
+            This is only the beginning of my journey, and I am excited
+            about what the future holds.
+        </p>
+
+        <div class="highlight">
+            <p>
+                One line of code at a time, I am building my future.
+            </p>
+        </div>
+
+
+        <!-- SHARE -->
+        
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <a href="#" class="logo">
+            <img src="./image.png" alt="" class="images">
+        </a>
+
+        <p>
+            Creating digital experiences, one line of code at a time.
+        </p>
+
+        <p>
+            © 2026 My Portfolio. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="porfolio.css">
+</head>
+
+<body>
+    <header class="navbar">
+
+        <!-- LOGO -->
+        <a href="#" class="logo">
+            <img src="./image.png" alt="" class="img">
+        </a>
+
+        <!-- HAMBURGER MENU -->
+        <div class="menu" id="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="nav-links" id="navLinks">
+            <a href="porfolio.html">Home</a>
+            <a href="contact.html">About Me</a>
+            <a href="My blog.html">My Blog</a>
+            <a href="About.html">Contact</a>
+        </nav>
+
+    </header>
+    <section class="hero" id="home">
+
+        <!-- LEFT IMAGE -->
+        <div class="hero-image">
+            <div class="image-circle"></div>
+
+            <img src="./image.png" alt="My Profile" class="profile-img">
+        </div>
+
+        <!-- RIGHT CONTENT -->
+        <div class="hero-content">
+
+            <h1>My Work</h1>
+
+            <h2>I'm a <span>Web Developer</span></h2>
+
+            <p>
+                I create modern, responsive and beautiful websites
+                that provide amazing user experiences.
+            </p>
+
+            <a href="#contact" class="hire-btn">HIRE ME</a>
+
+            <!-- <div class="social-icon">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><img src="./facebook (1).svg" alt=""></a>
+
+                <a href="#"><img src="./instagram (2).svg" alt="" class="instagram"></a>
+
+            </div> -->
+
+            <small>Let's create something amazing together.</small>
+
+        </div>
+
+    </section>
+    <section class="skills-section" id="skills">
+
+        <div class="container">
+
+            <h2>My Works Skills</h2>
+
+            <div class="skills-container">
+
+                <!-- Figma -->
+                <div class="skill-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                        class="css">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-figma"></i>
+                    </div>
+
+                    <h3>CSS</h3>
+
+                    <p>
+                        Sample text. Click to select the Text Element.
+                    </p>
+                </div>
+
+                <!-- WordPress -->
+                <div class="skill-card">
+
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-wordpress"></i>
+                    </div>
+
+                    <h3>WordPress</h3>
+
+                    <p>
+                        Sample text. Click to select the Text Element.
+                    </p>
+                </div>
+
+                <!-- React -->
+                <div class="skill-card">
+                    <img src="./react_white.png" alt="">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-react"></i>
+                    </div>
+
+                    <h3>React.js</h3>
+
+                    <p>
+                        Sample text. Click to select the Text Element.
+                    </p>
+                </div>
+
+                <!-- HTML -->
+                <div class="skill-card">
+                    <img src="./html_white.png" alt="">
+                    <div class="skill-icon">
+                        <i class="fa-brands fa-html5"></i>
+                    </div>
+
+                    <h3>HTML</h3>
+
+                    <p>
+                        Sample text. Click to select the Text Element.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="works-section" id="works">
+
+        <div class="works-container">
+
+            <h2>My Works</h2>
+
+            <p class="works-text">
+                Explore some of my recent creative projects.
+            </p>
+
+            <div class="works-grid">
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" alt="Website project">
+                </div>
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                        alt="Web development project">
+                </div>
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766" alt="Design project">
+                </div>
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166" alt="Website design">
+                </div>
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" alt="Portfolio project">
+                </div>
+
+                <div class="work-card">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Technology project">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section class="contact-section" id="contact">
+
+        <div class="contact-container">
+
+            <!-- LEFT SIDE: FORM -->
+
+            <div class="contact-form">
+
+                <h2>Get in Touch</h2>
+
+                <form id="contactForm">
+
+                    <div class="input-box">
+
+                        <label for="name">Name</label>
+
+                        <input type="text" id="name" placeholder="Enter your Name">
+
+                        <small class="error" id="nameError"></small>
+
+                    </div>
+
+
+                    <div class="input-box">
+
+                        <label for="email">Email</label>
+
+                        <input type="email" id="email" placeholder="Enter a valid email address">
+
+                        <small class="error" id="emailError"></small>
+
+                    </div>
+
+
+                    <button type="submit" class="submit-btn">
+                        SUBMIT
+                    </button>
+
+                    <p id="successMessage"></p>
+
+                </form>
+
+
+
+            </div>
+
+
+            <!-- RIGHT SIDE: IMAGE -->
+
+            <div class="contact-image">
+
+                <img src="./24770152_101.png" alt="Person working with a laptop">
+
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer-section">
+
+        <div class="footer-container">
+
+            <!-- LEFT SIDE -->
+
+            <div class="footer-left">
+
+                <h2>
+                    Let's create something<br>
+                    great
+                </h2>
+                <!-- <div class="social-icon">
+
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                    <a href="#"><img src="./facebook (1).svg" alt=""></a>
+
+                    <a href="./instagram (2).svg" style="color: white;">
+                        Instagram
+                    </a>
+
+                </div> -->
+
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="footer-right">
+
+                <h3>Contact</h3>
+
+                <a href="mailto:matt@gmail.com" class="mail">
+                    nse70godwin@gmail.com
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+    <script>
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            const name = document.getElementById("name").value.trim();
+
+            const email = document.getElementById("email").value.trim();
+
+            const nameError = document.getElementById("nameError");
+
+            const emailError = document.getElementById("emailError");
+
+            const successMessage = document.getElementById("successMessage");
+
+            // Clear previous errors
+
+            nameError.textContent = "";
+            emailError.textContent = "";
+            successMessage.textContent = "";
+
+            let valid = true;
+
+            // Name validation
+
+            if (name === "") {
+
+                nameError.textContent = "Please enter your name";
+
+                valid = false;
+
+            }
+
+            // Email validation
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (email === "") {
+
+                emailError.textContent = "Please enter your email";
+
+                valid = false;
+
+            }
+
+            else if (!emailPattern.test(email)) {
+
+                emailError.textContent = "Please enter a valid email address";
+
+                valid = false;
+
+            }
+
+            // Successful validation
+
+            if (valid) {
+
+                successMessage.textContent = "Your form has been submitted successfully!";
+
+                contactForm.reset();
+
+            }
+
+        });
+    </script>
+    <script>
+        const menu = document.getElementById("menu");
+        const navLinks = document.getElementById("navLinks");
+
+        menu.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+    </script>
+    <script>
+        const workCards = document.querySelectorAll(".work-card");
+
+        workCards.forEach((card) => {
+
+            card.addEventListener("mouseenter", () => {
+                card.style.animationPlayState = "paused";
+            });
+
+            card.addEventListener("mouseleave", () => {
+                card.style.animationPlayState = "running";
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>
