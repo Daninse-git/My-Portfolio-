@@ -1,0 +1,670 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(20, 17, 17);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 10%;
+    position: relative;
+}
+
+body {
+
+    border-radius: 20px;
+    background-color: rgb(20, 17, 17);
+}
+
+.logo {
+    width: 55px;
+    height: 50px;
+    display: block;
+}
+
+.logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* HAMBURGER */
+
+.menus {
+    width: 25px;
+    height: 22px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    z-index: 10;
+}
+
+.menus span {
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* NAV LINKS */
+
+.nav-links {
+    position: absolute;
+    top: 90px;
+    right: 10%;
+
+    width: 200px;
+    background-color: rgb(20, 17, 17);
+
+    display: none;
+    flex-direction: column;
+
+    padding: 20px;
+    gap: 20px;
+}
+
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav-link a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-link a:hover,
+.nav-link a.active {
+    color: #287bff;
+}
+
+/* Three lines */
+.menu {
+    display: none;
+    cursor: pointer;
+}
+
+.menu span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    border-radius: 5px;
+}
+
+/* Mobile */
+
+
+.images {
+    height: 15vh;
+}
+
+.about-hero {
+    min-height: 100vh;
+    background: radial-gradient(circle at 80% 40%, #102d55, #080e1c 55%);
+}
+
+.hero-container {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 10%;
+    gap: 50px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.small-title {
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 {
+    font-size: clamp(45px, 6vw, 75px);
+    margin-bottom: 10px;
+    color: white;
+}
+
+.hero-text h1 span,
+.journey-text h2 span,
+.section-heading h2 span,
+.contact h2 span {
+    color: white;
+}
+
+.hero-text h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.description {
+    color: #b6c0d1;
+    line-height: 2;
+    font-size: 15px;
+    max-width: 550px;
+}
+
+.hero-btn,
+.contact-btn {
+    display: inline-block;
+    background: var(--blue);
+    color: white;
+    text-decoration: none;
+    padding: 13px 32px;
+    border-radius: 5px;
+    margin-top: 30px;
+    transition: .3s;
+}
+
+.hero-btn:hover,
+.contact-btn:hover {
+    background: white;
+    color: var(--blue);
+    transform: translateY(-5px);
+}
+
+/* HERO IMAGE */
+
+.hero-image {
+    width: 48%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 550px;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 60px #0008;
+}
+
+.image-circle {
+    width: 350px;
+    height: 350px;
+    border: 2px solid var(--blue);
+    border-radius: 50%;
+    position: absolute;
+    animation: rotate 10s linear infinite;
+}
+
+.floating-box {
+    position: absolute;
+    z-index: 3;
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background: #13243e;
+    border: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--blue);
+    box-shadow: 0 5px 20px #0008;
+    animation: float 3s ease-in-out infinite;
+}
+
+.box-one {
+    top: 40px;
+    left: -35px;
+}
+
+.box-two {
+    bottom: 20;
+    right: -35px;
+    animation-delay: .5s;
+}
+
+.box-three {
+    top: 75%;
+    left: -35px;
+    animation-delay: 1s;
+}
+
+/* JOURNEY */
+
+.journey {
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+}
+
+.journey-image {
+    width: 48%;
+}
+
+.journey-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.journey-text {
+    width: 48%;
+}
+
+.journey-text h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: skyblue;
+}
+
+.journey-text p:not(.small-title) {
+    color: #b6c0d1;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 15px;
+}
+
+/* SECTION HEADING */
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+    color: white;
+}
+
+.section-heading h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.section-heading>p:last-child {
+    color: #aeb9cb;
+}
+
+/* SKILLS */
+
+.skills {
+    padding: 100px 10%;
+    background: #0c1527;
+}
+
+.skills-container,
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background: var(--card);
+    padding: 40px 25px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #1b304c;
+    transition: .4s;
+}
+
+.skill-card:hover,
+.service-card:hover {
+    transform: translateY(-12px);
+    border-color: var(--blue);
+    box-shadow: 0 10px 35px #1685ff20;
+}
+
+.skill-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 12px;
+    background: #182a44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto auto 20px;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.html {
+    color: #ff713e;
+}
+
+.css {
+    color: #1685ff;
+}
+
+.js {
+    color: #f7df1e;
+}
+
+.skill-card h3,
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 21px;
+    color: white;
+}
+
+.skill-card p,
+.service-card p {
+    color: #aeb9cb;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* SERVICES */
+
+.services {
+    padding: 100px 10%;
+}
+
+.service-card {
+    background: var(--card);
+    padding: 35px 25px;
+    border-radius: 12px;
+    border: 1px solid #1b304c;
+    transition: .4s;
+}
+
+.service-icon {
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+/* CONTACT */
+
+.contact {
+    background: linear-gradient(120deg, #102d55, #080e1c);
+    text-align: center;
+    padding: 100px 10%;
+}
+
+.contact h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.contact>p:not(.small-title) {
+    color: #b6c0d1;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #050a13;
+    color: #aeb9cb;
+    font-size: 13px;
+}
+
+/* ANIMATIONS */
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* TABLET */
+@media (max-width: 768px) {
+    .menu {
+        display: block;
+    }
+
+    .nav-link {
+        position: absolute;
+        top: 90px;
+        left: -100%;
+        width: 100%;
+        background: #080d27;
+        flex-direction: column;
+        padding: 25px 0;
+        gap: 25px;
+        transition: 0.4s;
+    }
+
+    .nav-link.show {
+        left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        padding: 60px 6%;
+        gap: 35px;
+    }
+
+    .hero-text {
+        width: 50%;
+    }
+
+    .hero-image {
+        width: 50%;
+    }
+
+    .hero-image img {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .journey {
+        padding: 75px 6%;
+        gap: 35px;
+    }
+
+    .journey-text h2 {
+        font-size: 28px;
+    }
+
+    .journey-image img {
+        height: 350px;
+    }
+
+    .skills,
+    .services {
+        padding: 80px 6%;
+    }
+
+    .skills-container,
+    .services-container {
+        gap: 15px;
+    }
+
+    .skill-card,
+    .service-card {
+        padding: 25px 15px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 425px) {
+
+    .navbar {
+        padding: 20px 6%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        padding: 55px 7%;
+        text-align: center;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .hero-image {
+        margin-top: 45px;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    .image-circle {
+        width: 260px;
+        height: 260px;
+    }
+
+    .floating-box {
+        width: 50px;
+        height: 50px;
+    }
+
+    .box-three {
+        left: -10px;
+    }
+
+    .journey {
+        flex-direction: column;
+        padding: 75px 7%;
+    }
+
+    .journey-image,
+    .journey-text {
+        width: 100%;
+    }
+
+    .journey-image img {
+        height: 270px;
+    }
+
+    .journey-text h2 {
+        font-size: 30px;
+    }
+
+    .skills,
+    .services {
+        padding: 75px 7%;
+    }
+
+    .skills-container,
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .contact {
+        padding: 75px 7%;
+    }
+
+    .contact h2 {
+        font-size: 30px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 375px) {
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-image img {
+        height: 220px;
+    }
+
+    .journey-text h2 {
+        font-size: 26px;
+    }
+}

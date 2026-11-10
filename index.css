@@ -17,11 +17,12 @@
     position: relative;
 }
 
-body{
-    
-    border-radius: 20px ;
-    background-color:rgb(20, 17, 17);
+body {
+
+    border-radius: 20px;
+    background-color: rgb(20, 17, 17);
 }
+
 .logo {
     width: 55px;
     height: 50px;
@@ -63,7 +64,7 @@ body{
     right: 10%;
 
     width: 200px;
-    background-color:rgb(20, 17, 17);
+    background-color: rgb(20, 17, 17);
 
     display: none;
     flex-direction: column;
@@ -88,10 +89,12 @@ body{
 .nav-links.active {
     display: flex;
 }
-.img{
-   height: 15vh;
-   border-radius: 10px;
+
+.img {
+    height: 15vh;
+    border-radius: 10px;
 }
+
 .hero {
     width: 100%;
     min-height: 90vh;
@@ -121,9 +124,11 @@ body{
     border-radius: 50%;
     position: absolute;
 }
-.css{
+
+.css {
     height: 15vh;
 }
+
 .profile-img {
     width: 100%;
     height: 500px;
@@ -131,7 +136,7 @@ body{
     position: relative;
     z-index: 2;
 
-   border-radius: 50px;
+    border-radius: 50px;
     animation: floatImage 3s ease-in-out infinite;
 }
 
@@ -208,7 +213,7 @@ body{
 }
 
 .social-icon a {
-    
+
     color: white;
     font-size: 20px;
     transition: 0.3s;
@@ -223,10 +228,11 @@ body{
     margin-top: 25px;
     color: #888;
 }
+
 .skills-section {
     width: 100%;
     min-height: 100vh;
- 
+
     padding: 80px 5%;
     display: flex;
     justify-content: center;
@@ -254,7 +260,7 @@ body{
 }
 
 .skill-card {
-   background-color: rgb(45, 99, 121);
+    background-color: rgb(45, 99, 121);
     min-height: 290px;
     border-radius: 30px;
     padding: 30px 20px;
@@ -332,6 +338,7 @@ body{
     transform: translateY(-15px) scale(1.04);
     background: linear-gradient(135deg, #080b91, #003acb);
 }
+
 .works-section {
     width: 100%;
     min-height: 100vh;
@@ -375,7 +382,7 @@ body{
     border-radius: 25px;
     overflow: hidden;
     background: rgb(94, 89, 89);
-    
+
     animation: floatImage 4s ease-in-out infinite;
 
     transition: 0.4s ease;
@@ -392,7 +399,7 @@ body{
 .contact-section {
     width: 100%;
     min-height: 100vh;
-  background: linear-gradient(120deg,
+    background: linear-gradient(120deg,
             black,
             rgb(94, 86, 86),
             rgb(63, 60, 60));
@@ -453,8 +460,8 @@ body{
 .input-box input:focus {
     color: white;
     border-bottom: 2px solid #3989df;
-    border-top: 2px  #3989df;
-   
+    border-top: 2px #3989df;
+
 }
 
 .input-box input::placeholder {
@@ -469,11 +476,9 @@ body{
     border: none;
     border-radius: 40px;
 
-    background: linear-gradient(
-        90deg,
-        #4288d9,
-        #69b9ec
-    );
+    background: linear-gradient(90deg,
+            #4288d9,
+            #69b9ec);
 
     color: white;
     font-size: 14px;
@@ -529,6 +534,7 @@ body{
     margin-top: 15px;
     font-size: 14px;
 }
+
 .footer-section {
     width: 100%;
     min-height: 280px;
@@ -548,7 +554,7 @@ body{
     align-items: center;
 }
 
-.instagram{
+.instagram {
     padding: 10px;
     border-radius: 10px;
     color: white;
@@ -594,7 +600,7 @@ body{
 
 .footer-right h3 {
     font-family: Georgia, serif;
-    font-size:2.3rem;
+    font-size: 2.3rem;
     font-weight: 400;
     color: #234b96;
     margin-bottom: 20px;
@@ -611,10 +617,10 @@ body{
     color: #111;
 }
 
-.mail{
-   
+.mail {
+
     font-size: 1.4rem;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -815,6 +821,7 @@ body{
     }
 
 }
+
 @media (max-width: 768px) {
 
     .hero {
@@ -882,6 +889,7 @@ body{
         font-size: 15px;
     }
 }
+
 @keyframes floatImage {
     0% {
         transform: translateY(0);
