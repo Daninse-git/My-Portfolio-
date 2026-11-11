@@ -329,7 +329,10 @@ body {
 .skill-card:nth-child(4) {
     animation-delay: 1.5s;
 }
-
+.css{
+    height: 14vh;
+    border-radius: 20px;
+}
 /* Icons */
 
 .skill-icon {
