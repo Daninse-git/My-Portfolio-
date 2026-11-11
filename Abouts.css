@@ -4,18 +4,7 @@
     box-sizing: border-box;
 }
 
-.navbar {
-    width: 100%;
-    height: 90px;
-    background-color: rgb(20, 17, 17);
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 0 10%;
-    position: relative;
-}
 
 body {
 
@@ -36,75 +25,83 @@ body {
 
 /* HAMBURGER */
 
-.menus {
-    width: 25px;
-    height: 22px;
+.navbar {
+    width: 100%;
+    height: 80px;
+    display: flex;
 
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 12%;
+    position: relative;
+    z-index: 99;
+}
+
+#menu {
+    display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    gap: 7px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 100;
 }
 
-.menus span {
-    width: 100%;
-    height: 2px;
-    background-color: white;
+.hamburger span {
+    width: 33px;
+    height: 4px;
+    background: white;
     border-radius: 5px;
-    transition: 0.3s;
+  
 }
 
-/* NAV LINKS */
-
+/* Navigation links */
 .nav-links {
     position: absolute;
-    top: 90px;
-    right: 10%;
-
-    width: 200px;
-    background-color: rgb(20, 17, 17);
-
-    display: none;
-    flex-direction: column;
-
-    padding: 20px;
-    gap: 20px;
-}
-
-
-.nav-link {
     display: flex;
-    align-items: center;
-    gap: 35px;
+    justify-content: center;
+    /* left: 0%; */
+    right: 0rem;
+    top: 0rem;
+    background: rgb(20, 17, 17);
+    width: 200px;
+   padding: 70px; 
+    list-style: none;
+    display: none;
 }
 
-.nav-link a {
+.nav-links li {
+    width: auto;
+    margin: 15px 0;
+    
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 16px;
-    transition: 0.3s;
+    /* border: 2px solid red ; */
 }
 
-.nav-link a:hover,
-.nav-link a.active {
-    color: #287bff;
-}
-
-/* Three lines */
-.menu {
-    display: none;
-    cursor: pointer;
-}
-
-.menu span {
+#menu:checked~.nav-links {
     display: block;
-    width: 30px;
-    height: 3px;
-    background: white;
-    margin: 6px 0;
-    border-radius: 5px;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 8%;
+    }
+
+    .nav-links {
+        right: 8%;
+    }
 }
 
 /* Mobile */
@@ -448,7 +445,7 @@ footer {
 
 /* TABLET */
 @media (max-width: 768px) {
-    .menu {
+    /* .menu {
         display: block;
     }
 
@@ -466,11 +463,11 @@ footer {
 
     .nav-link.show {
         left: 0;
-    }
+    } */
 }
 
 @media (max-width: 768px) {
-
+    /* 
     .navbar {
         padding: 20px 5%;
     }
@@ -481,7 +478,7 @@ footer {
 
     .nav-links a {
         font-size: 12px;
-    }
+    } */
 
     .hero-container {
         padding: 60px 6%;
@@ -541,7 +538,7 @@ footer {
 
 @media (max-width: 425px) {
 
-    .navbar {
+    /* .navbar {
         padding: 20px 6%;
         flex-direction: column;
         gap: 20px;
@@ -556,7 +553,7 @@ footer {
 
     .nav-links a {
         font-size: 12px;
-    }
+    } */
 
     .hero-container {
         flex-direction: column;
