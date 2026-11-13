@@ -71,33 +71,6 @@ body {
 
 /* MOBILE RESPONSIVENESS */
 
-@media screen and (max-width: 768px) {
-
-    .hamburger {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #111;
-        text-align: center;
-        gap: 0;
-    }
-
-    .nav-links li {
-        padding: 18px;
-    }
-
-    #menu-toggle:checked ~ .nav-links {
-        display: flex;
-    }
-}
-
 
 /* Responsive */
 
@@ -438,6 +411,33 @@ footer {
 
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #111;
+        text-align: center;
+        gap: 0;
+    }
+
+    .nav-links li {
+        padding: 18px;
+    }
+
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
     }
 }
 
